@@ -47,7 +47,7 @@ def maximum_path(
   topology: str="1-step",
   output_scores: bool=False,
 ):
-  """
+  r"""
   Cython optimised version of Monotonic Alignment Search
   Returns the most likely alignment for the given log-likelihood matrix.
 
