@@ -19,6 +19,8 @@ ext_modules = cythonize(
 setup(
   name="monotonic_align",
   ext_modules=ext_modules,
+  maintainer="Eric Joanis",
+  maintainer_email="eric.joanis@nrc-cnrc.gc.ca",
   include_dirs=[numpy.get_include(), "monotonic_align"],
   packages=find_packages(),
   setup_requires=["numpy", "cython"],
