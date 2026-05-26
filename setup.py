@@ -22,6 +22,6 @@ setup(
   include_dirs=[numpy.get_include(), "monotonic_align"],
   packages=find_packages(),
   setup_requires=["numpy", "cython"],
-  install_requires=["numpy"],
+  install_requires=["numpy", "torch"],
   version=_VERSION,
 )
