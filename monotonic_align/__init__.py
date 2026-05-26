@@ -1,8 +1,4 @@
-try:
-    from importlib.metadata import version
-except ImportError:
-    from importlib_metadata import version  # For Python <3.8
-
-__version__ = version("monotonic_align")
+from ._version import VERSION
+__version__ = VERSION
 
 from monotonic_align.mas import *

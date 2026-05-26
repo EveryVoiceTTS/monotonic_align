@@ -4,7 +4,7 @@ from distutils.core import setup
 from Cython.Build import cythonize
 
 
-_VERSION = "1.2"
+_VERSION = "1.2.1"
 
 
 ext_modules = cythonize(
