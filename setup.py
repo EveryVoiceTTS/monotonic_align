@@ -17,7 +17,7 @@ ext_modules = cythonize(
 )
 
 setup(
-  name="monotonic_align",
+  name="ilt-monotonic-align",
   ext_modules=ext_modules,
   maintainer="Eric Joanis",
   maintainer_email="eric.joanis@nrc-cnrc.gc.ca",
