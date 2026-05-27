@@ -1,3 +1,4 @@
+import os
 import numpy
 from setuptools import Extension, find_packages
 from distutils.core import setup
@@ -16,6 +17,10 @@ ext_modules = cythonize(
   compiler_directives={"language_level": "3"},
 )
 
+this_directory = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(this_directory, "README.md")) as f:
+  long_description = f.read()
+
 setup(
   name="ilt-monotonic-align",
   ext_modules=ext_modules,
@@ -27,4 +32,8 @@ setup(
   install_requires=["numpy", "torch"],
   version=_VERSION,
   license="MIT",
+  description="Monotonic Alignment Search",
+  long_description=long_description,
+  long_description_content_type="text/markdown",
+  url="https://github.com/EveryVoiceTTS/monotonic_align",
 )
