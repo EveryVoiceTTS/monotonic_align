@@ -1,6 +1,17 @@
+# EveryVoiceTTS fork of monotonic_align
+
+We forked https://github.com/resemble-ai/monotonic_align in order to publish it to PyPI
+so that it can be installed without requiring a clone:
+
+```
+pip install ilt-monotonic-align
+```
+
+# Original README file from [resemble-ai](https://github.com/resemble-ai/monotonic_align):
+
 Adapted from the MAS in [Glow-TTS](https://github.com/jaywalnut310/glow-tts/tree/master/monotonic_align). I made it installable and added variants.
 
-# Installation
+## Installation
 ```
 pip install git+https://github.com/resemble-ai/monotonic_align.git
 ```
@@ -8,7 +19,7 @@ Installing `monotonic_align` doesn't require torch, but using ``monotonic_align`
 Please install PyTorch yourself, as its installation differ from system to system.
 
 
-# How to Use
+## How to Use
 ```python
 # Suppose you have:
 # 1. a probability matrix of size (batch_size=B, symbol_len=S, mel_lens=T)
