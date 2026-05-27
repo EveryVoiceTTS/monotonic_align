@@ -26,4 +26,5 @@ setup(
   setup_requires=["numpy", "cython"],
   install_requires=["numpy", "torch"],
   version=_VERSION,
+  license="MIT",
 )
