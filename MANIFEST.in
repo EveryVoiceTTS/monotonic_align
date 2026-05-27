@@ -1,2 +1,3 @@
 include monotonic_align/*.pyx
-include monotonic_align/*.pxd
+include monotonic_align/*.py
+exclude tests/*
