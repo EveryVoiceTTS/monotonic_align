@@ -1,39 +1,40 @@
 import os
-import numpy
-from setuptools import Extension, find_packages
 from distutils.core import setup
-from Cython.Build import cythonize
 
+import numpy
+from Cython.Build import cythonize
+from setuptools import Extension, find_packages
 
 _VERSION = "1.2.1"
 
 
 ext_modules = cythonize(
-  ["monotonic_align/core.pyx",
-   "monotonic_align/core1alt.pyx",
-   "monotonic_align/core2.pyx",
-   "monotonic_align/core2eps.pyx",
-  ],
-  compiler_directives={"language_level": "3"},
+    [
+        "monotonic_align/core.pyx",
+        "monotonic_align/core1alt.pyx",
+        "monotonic_align/core2.pyx",
+        "monotonic_align/core2eps.pyx",
+    ],
+    compiler_directives={"language_level": "3"},
 )
 
 this_directory = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(this_directory, "README.md")) as f:
-  long_description = f.read()
+    long_description = f.read()
 
 setup(
-  name="ilt-monotonic-align",
-  ext_modules=ext_modules,
-  maintainer="Eric Joanis",
-  maintainer_email="eric.joanis@nrc-cnrc.gc.ca",
-  include_dirs=[numpy.get_include(), "monotonic_align"],
-  packages=find_packages(),
-  setup_requires=["numpy", "cython"],
-  install_requires=["numpy", "torch"],
-  version=_VERSION,
-  license="MIT",
-  description="Monotonic Alignment Search",
-  long_description=long_description,
-  long_description_content_type="text/markdown",
-  url="https://github.com/EveryVoiceTTS/monotonic_align",
+    name="ilt-monotonic-align",
+    ext_modules=ext_modules,
+    maintainer="Eric Joanis",
+    maintainer_email="eric.joanis@nrc-cnrc.gc.ca",
+    include_dirs=[numpy.get_include(), "monotonic_align"],
+    packages=find_packages(),
+    setup_requires=["numpy", "cython"],
+    install_requires=["numpy", "torch"],
+    version=_VERSION,
+    license="MIT",
+    description="Monotonic Alignment Search",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/EveryVoiceTTS/monotonic_align",
 )
